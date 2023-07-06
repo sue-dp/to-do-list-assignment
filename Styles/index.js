@@ -50,21 +50,21 @@ function addTask() {
   inputBox.value = "";
 
   function deleteTask() {
-    console.log("new task div -> ", newTaskDiv);
-    console.log("completedList -> ", completedList);
-    console.log("pendingList -> ", pendingList);
-    if (newTaskDiv in completedList) {
-      completedList.removeChild();
-    } else if (newTaskDiv in pendingList) {
-      pendingList.removeChild();
-    }
-    // if (doneList.length > toDoList.length) {
-    //   console.log(toDoList, doneList);
-    //   completedList.removeChild(newTaskDiv);
-    // } else {
-    //   console.log(toDoList, doneList);
-    //   pendingList.removeChild(newTaskDiv);
+    // console.log("new task div -> ", newTaskDiv);
+    // console.log("completedList -> ", completedList);
+    // console.log("pendingList -> ", pendingList);
+    // if (newTaskDiv in completedList) {
+    //   completedList.removeChild();
+    // } else if (newTaskDiv in pendingList) {
+    //   pendingList.removeChild();
     // }
+    if (doneList.length > toDoList.length) {
+      console.log(toDoList, doneList);
+      completedList.removeChild(newTaskDiv);
+    } else {
+      console.log(toDoList, doneList);
+      pendingList.removeChild(newTaskDiv);
+    }
     if (completedList.children.length === 0) {
       completedList.appendChild(noTasks);
     }

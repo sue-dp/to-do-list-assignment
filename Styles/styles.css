@@ -75,6 +75,9 @@ body .main-cont .pending-cont .pending-list .input-task::-moz-placeholder {
 body .main-cont .pending-cont .pending-list .input-task::placeholder {
   color: lime;
 }
+body .main-cont .pending-cont .pending-list .input-task:hover {
+  border-radius: 30px;
+}
 body .main-cont .pending-cont .pending-list .new-task {
   /* Customize the label (the container) */
   /* Hide the browser's default checkbox */

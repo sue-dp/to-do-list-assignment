@@ -80,6 +80,10 @@ body {
           &::placeholder {
             color: lime;
           }
+
+          &:hover {
+            border-radius: 30px;
+          }
         }
 
         .new-task {
