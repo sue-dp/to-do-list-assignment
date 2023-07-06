@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+body .main-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Fira Sans";
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(52, 49, 49);
+}
+body .main-cont .main-head {
+  margin: 10px;
+  font-family: "Moirai One";
+  font-size: 90px;
+  font-weight: 700;
+  color: aqua;
+}
+body .main-cont .sub-head {
+  margin: 10px;
+  color: aqua;
+}
+body .main-cont .pending-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 80%;
+  height: 100%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+body .main-cont .pending-cont .pending-head {
+  font-family: "Moirai One";
+  font-size: 45px;
+  margin-bottom: 20px;
+  color: yellow;
+}
+body .main-cont .pending-cont .pending-list .add-task {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  margin-right: 15px;
+  font-family: "Fira Sans";
+  font-size: 20px;
+  font-weight: 600;
+  width: 15%;
+  height: 44px;
+  border-radius: 15px;
+  background-color: hotpink;
+}
+body .main-cont .pending-cont .pending-list .add-task:hover {
+  border-radius: 30px;
+}
+body .main-cont .pending-cont .pending-list .input-task {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-family: "Fira Sans";
+  font-size: 20px;
+  font-weight: 600;
+  width: 70%;
+  height: 38px;
+  border: 2px solid lime;
+  border-radius: 15px;
+  background-color: rgb(52, 49, 49);
+  padding-left: 15px;
+  color: lime;
+}
+body .main-cont .pending-cont .pending-list .input-task::-moz-placeholder {
+  color: lime;
+}
+body .main-cont .pending-cont .pending-list .input-task::placeholder {
+  color: lime;
+}
+body .main-cont .pending-cont .pending-list .new-task {
+  /* Customize the label (the container) */
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a gold background color */
+  /* When the checkbox is checked, add a orange background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  font-family: "Fira Sans";
+  font-size: 20px;
+  font-weight: 600;
+  color: lime;
+}
+body .main-cont .pending-cont .pending-list .new-task .container {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+body .main-cont .pending-cont .pending-list .new-task .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+body .main-cont .pending-cont .pending-list .new-task .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 33px;
+  width: 33px;
+  background-color: darkgray;
+}
+body .main-cont .pending-cont .pending-list .new-task .container:hover input ~ .checkmark {
+  background-color: yellow;
+}
+body .main-cont .pending-cont .pending-list .new-task .container input:checked ~ .checkmark {
+  background-color: hotpink;
+}
+body .main-cont .pending-cont .pending-list .new-task .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+body .main-cont .pending-cont .pending-list .new-task .container input:checked ~ .checkmark:after {
+  display: block;
+}
+body .main-cont .pending-cont .pending-list .new-task .container .checkmark:after {
+  left: 10px;
+  top: 3px;
+  width: 9px;
+  height: 17px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+body .main-cont .pending-cont .pending-list .new-task .container {
+  border: solid red 1px;
+}
+body .main-cont .pending-cont .pending-list .new-task .task-description {
+  display: flex;
+  width: 75%;
+  padding-left: 5%;
+  margin: 10px 10px 10px 0;
+}
+body .main-cont .pending-cont .pending-list .new-task button {
+  font-size: 25px;
+  color: hotpink;
+  background-color: transparent;
+  border: none;
+  padding-left: 30px;
+}
+body .main-cont .completed-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 80%;
+  height: 100%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+body .main-cont .completed-cont h3 {
+  font-family: "Moirai One";
+  font-size: 45px;
+  color: yellow;
+}
+body .main-cont .completed-cont .completed-list h4 {
+  color: lime;
+}
+body .main-cont .completed-cont .completed-list .new-task {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  font-family: "Fira Sans";
+  font-size: 20px;
+  font-weight: 600;
+  color: lime;
+}
+body .main-cont .completed-cont .completed-list .new-task .task-description {
+  display: flex;
+  width: 75%;
+  padding-left: 5%;
+  margin: 10px 10px 10px 0;
+  color: lime;
+}
+body .main-cont .completed-cont .completed-list .new-task button {
+  font-size: 25px;
+  color: hotpink;
+  background-color: transparent;
+  border: none;
+  padding-left: 30px;
+}/*# sourceMappingURL=styles.css.map */

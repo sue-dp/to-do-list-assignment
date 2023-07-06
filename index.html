@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Moirai+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <i class="fa-solid fa-pencil"></i>
+    <i class="fa-solid fa-trash-can"></i>
+    <i class="fa-regular fa-diagram-subtask"></i> -->
+    <link rel="stylesheet" href="./Styles/styles.css" />
+    <title>TASK SLAYER</title>
+  </head>
+  <body>
+    <div class="main-cont" id="main-cont">
+      <h1 class="main-head" id="main-head">TASK SLAYER</h1>
+      <h2 class="sub-head" id="sub-head">The Place To Get Things Done!</h2>
+      <div class="pending-cont" id="pending-cont">
+        <h3 class="pending-head" id="pending-head">PENDING TASKS:</h3>
+        <div class="pending-list" id="pending-list">
+          <button class="add-task" id="add-task">Add Task</button>
+          <input
+            class="input-task"
+            id="input-task"
+            placeholder="Describe your task here"
+          />
+          <!-- <label class="container"
+            ><input type="checkbox" />Two
+            <span class="checkmark"></span>
+          </label> -->
+        </div>
+      </div>
+      <div class="completed-cont" id="completed-cont">
+        <h3 class="completed-head" id="completed-head">COMPLETED TASKS:</h3>
+        <div class="completed-list" id="completed-list">
+          <h4 id="no-completed-tasks">You have NO completed tasks.</h4>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/fe3c9c2b1a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./Styles/index.js"></script>
+  </body>
+</html>
