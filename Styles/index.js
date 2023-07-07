@@ -1,30 +1,40 @@
 const inputBox = document.querySelector(".input-task");
 const pendingList = document.querySelector(".pending-list");
 const completedList = document.querySelector(".completed-list");
-const checkboxArray = [];
+// const checkboxArray = [];
 let noTasks = document.querySelector("#no-completed-tasks");
 
+let toDoList = [];
+let doneList = [];
+
 function addTask() {
-  let toDoList = [];
-  let doneList = [];
   const textDiv = document.createElement("div");
   textDiv.textContent = inputBox.value;
-  let newTaskDiv = document.createElement("div");
+
+  const newTaskDiv = document.createElement("div");
+  newTaskDiv.classList.add("new-task");
+
+  const container = document.createElement("label");
+  container.classList.add("container");
 
   const checkbox = document.createElement("input");
-  checkbox.classList.add("container");
   checkbox.type = "checkbox";
-  checkboxArray.push(checkbox);
+
+  const checkmark = document.createElement("span");
+  checkmark.classList.add("checkmark");
+
+  container.appendChild(checkbox);
+  container.appendChild(checkmark);
 
   const trashcan = document.createElement("button");
   trashcan.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
 
-  newTaskDiv.appendChild(checkbox);
+  newTaskDiv.appendChild(container);
   newTaskDiv.appendChild(textDiv);
   newTaskDiv.appendChild(trashcan);
+
   pendingList.appendChild(newTaskDiv);
 
-  newTaskDiv.classList.add("new-task");
   newTaskDiv.id = "newTask";
   textDiv.classList.add("task-description");
   trashcan.classList.add("trash-can");
@@ -36,10 +46,11 @@ function addTask() {
       if (completedList.contains(noTasks)) {
         completedList.removeChild(noTasks);
       }
-      doneList.push(1);
+      doneList.push(newTaskDiv);
     } else {
       textDiv.style.textDecoration = "none";
       pendingList.appendChild(newTaskDiv);
+      doneList = doneList.filter((task) => task !== newTaskDiv);
     }
 
     if (completedList.children.length === 0) {
@@ -50,28 +61,18 @@ function addTask() {
   inputBox.value = "";
 
   function deleteTask() {
-    // console.log("new task div -> ", newTaskDiv);
-    // console.log("completedList -> ", completedList);
-    // console.log("pendingList -> ", pendingList);
-    // if (newTaskDiv in completedList) {
-    //   completedList.removeChild();
-    // } else if (newTaskDiv in pendingList) {
-    //   pendingList.removeChild();
-    // }
-    if (doneList.length > toDoList.length) {
-      console.log(toDoList, doneList);
+    if (doneList.includes(newTaskDiv)) {
       completedList.removeChild(newTaskDiv);
+      doneList = doneList.filter((task) => task !== newTaskDiv); // Remove newTaskDiv from the doneList
     } else {
-      console.log(toDoList, doneList);
       pendingList.removeChild(newTaskDiv);
     }
+
     if (completedList.children.length === 0) {
       completedList.appendChild(noTasks);
     }
   }
 
-  toDoList.push(1);
-  doneList.push(1);
   trashcan.onclick = deleteTask;
 }
 

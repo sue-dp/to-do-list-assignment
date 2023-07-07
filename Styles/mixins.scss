@@ -26,16 +26,17 @@
   /* Create a custom checkbox */
   .checkmark {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -10px;
+    left: 10px;
+    bottom: 10px;
     height: 33px;
     width: 33px;
-    background-color: darkgray;
+    background-color: yellow;
   }
 
   /* On mouse-over, add a gold background color */
   .container:hover input ~ .checkmark {
-    background-color: yellow;
+    background-color: hotpink;
   }
 
   /* When the checkbox is checked, add a orange background */

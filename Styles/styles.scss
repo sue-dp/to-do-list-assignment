@@ -14,6 +14,7 @@ body {
     margin: 0;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
     background-color: rgb(52, 49, 49);
 
     .main-head {
@@ -55,7 +56,6 @@ body {
           font-weight: 600;
           width: 15%;
           height: 44px;
-          // border: 2px solid darkgrey;
           border-radius: 15px;
           background-color: hotpink;
           &:hover {
@@ -69,7 +69,7 @@ body {
           font-family: "Fira Sans";
           font-size: 20px;
           font-weight: 600;
-          width: 70%;
+          width: 70.5%;
           height: 38px;
           border: 2px solid lime;
           border-radius: 15px;
@@ -87,20 +87,14 @@ body {
         }
 
         .new-task {
-          // .container {
-          // input {
           @include check-box;
-          //   }
-          // }
-          .container {
-            border: solid red 1px;
-          }
+
           display: flex;
           flex-direction: row;
           justify-content: left;
           align-items: center;
           font-family: "Fira Sans";
-          font-size: 20px;
+          font-size: 25px;
           font-weight: 600;
           color: lime;
 
@@ -118,9 +112,6 @@ body {
             border: none;
             padding-left: 30px;
           }
-          // "></i>
-          // <i class="fa-solid fa-trash-can"></i>
-          // <i class="fa-regular fa-diagram-subtask"></i>
         }
       }
     }
@@ -141,19 +132,18 @@ body {
       }
       .completed-list {
         h4 {
+          font-size: 25px;
           color: lime;
         }
         .new-task {
-          // .container {
-          //   @include check-box;
-          // }
+          @include check-box;
 
           display: flex;
           flex-direction: row;
           justify-content: left;
           align-items: center;
           font-family: "Fira Sans";
-          font-size: 20px;
+          font-size: 25px;
           font-weight: 600;
           color: lime;
 
@@ -172,9 +162,6 @@ body {
             border: none;
             padding-left: 30px;
           }
-          // "></i>
-          // <i class="fa-solid fa-trash-can"></i>
-          // <i class="fa-regular fa-diagram-subtask"></i>
         }
       }
     }
