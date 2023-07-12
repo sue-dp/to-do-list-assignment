@@ -1,7 +1,6 @@
 const inputBox = document.querySelector(".input-task");
 const pendingList = document.querySelector(".pending-list");
 const completedList = document.querySelector(".completed-list");
-// const checkboxArray = [];
 let noTasks = document.querySelector("#no-completed-tasks");
 
 let toDoList = [];
